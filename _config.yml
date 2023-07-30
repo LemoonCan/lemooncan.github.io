@@ -2,7 +2,7 @@
 # plugins: - jekyll-remote-theme
 
 ### VALUES YOU SHOULD CHANGE ###
-permalink: /_site/index.html
+permalink: /index.html
 # GENERAL SITE SETTINGS
 # title: This will be displayed as the website's name in your browser tab.
 title: Lemoon's Blog
