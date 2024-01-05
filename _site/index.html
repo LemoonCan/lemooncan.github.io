@@ -131,6 +131,28 @@
         </a>
       
     </div>
+
+    <div id="snowflakes-container"></div>
+    <script>
+        function createSnowflake() {
+        const snowflake = document.createElement('div');
+        snowflake.classList.add('snowflake');
+        snowflake.innerText = '❄';
+        snowflake.style.left = Math.random() * window.innerWidth + 'px';
+        snowflake.style.animationDuration = Math.random() * 20 + 15 + 's'; // 随机动画持续时间
+        snowflake.style.opacity = Math.random();
+        snowflake.style.fontSize = Math.random() * 20 + 10 + 'px';
+
+        document.body.appendChild(snowflake);
+
+        // 动画结束后移除雪花
+        snowflake.addEventListener('animationend', function() {
+            snowflake.remove();
+        });
+    }
+
+    setInterval(createSnowflake, 300);
+    </script>
   </div>
 </div>
 

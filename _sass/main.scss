@@ -421,6 +421,23 @@ a {
 
 }
 
+/* 雪花动画 */
+.snowflake {
+  position: fixed;
+  top: -10px;
+  z-index: 9999;
+  color: #fff;
+  user-select: none;
+  pointer-events: none;
+  animation-name: fall;
+}
+
+@keyframes fall {
+  to {
+      transform: translateY(100vh);
+  }
+}
+
 /* Skills Section */
 
 #skills {
