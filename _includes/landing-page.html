@@ -1,10 +1,10 @@
 <div id="landing">
-  <div class="landing-title">
+    <div class="landing-title">
     <div class="circle-avatar">
-      <img src="/assets/img/avactor.jpg" alt="Avatar">
-      <h1>{{site.username}}</h1>
-    </div>
-    <div class="landing-icons">
+              <img src="/assets/img/avactor.jpg" alt="Avatar">
+              <h1>{{site.username}}</h1>
+      </div>
+        <div class="landing-icons">
       {% if site.email != null %}
         <a class="social-link email" aria-label="My E-Mail" href="mailto:{{site.email}}">
           <svg viewBox="0 0 200 200" class="circle">
@@ -68,7 +68,7 @@
       {% endif %}
 
       {% if site.zhihu_username != null %}
-        <a class="social-link linkedin" aria-label="My Zhihu" target="_blank"
+        <a class="social-link zhihu" aria-label="My Zhihu" target="_blank"
           rel="noreferrer" href="https://www.zhihu.com/people/{{site.zhihu_username}}"
         >
           <svg viewBox="0 0 200 200" class="circle">
@@ -105,6 +105,7 @@
       document.addEventListener('visibilitychange', handleVisibilityChange, false);
       // 页面加载时开始下雪
       startSnowing();
+      
 
       function createSnowflake() {
         const snowflake = document.createElement('div');
