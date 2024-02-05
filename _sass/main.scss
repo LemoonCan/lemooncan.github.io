@@ -156,21 +156,22 @@ a {
 #landing {
   background: $bg-color;
   color: $text-color;
-  display: flex;
-  height: 100%;
-  margin: 0.5rem;
-  padding: 0.5rem;
-  text-align: center;
-  overflow: hidden;
+  // display: flex;
+  // height: 100%;
+  // margin: 0.5rem;
+  // padding: 0.5rem;
+  // text-align: center;
+  // overflow: hidden;
 }
 
+
+
 .landing-title {
-  left: 0;
-  margin: 0.5rem;
-  padding: 0.5rem;
-  position: absolute;
-  right: 0;
-  top: 40%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh; /* 使用视口高度确保内容垂直居中 */
 }
 
 .landing-icons {
