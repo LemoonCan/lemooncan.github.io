@@ -7,9 +7,6 @@ $(document).ready(function() {
     window.scrollTo(0, 0);
   });
 
-  /* particlesJS.load(@dom-id, @path-json, @callback (optional)); */
-  // particlesJS.load('landing', 'assets/particles.json', function() {});
-
   // Initialize AOS
   AOS.init({
     disable: 'mobile',
@@ -20,7 +17,6 @@ $(document).ready(function() {
     once: true
   });
 
-  // randomizeOrder();
 });
 
 /* FUNCTIONS */
