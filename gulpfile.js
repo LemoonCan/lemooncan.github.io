@@ -38,6 +38,23 @@ function stylesVendors() {
 }
 
 /**
+ * Compile and minify custom js
+ */
+function scriptsCustom() {
+  return gulp
+    .src([ '_js/custom/**/*.js' ])  // 匹配 custom 目录及其子目录下的所有 JS 文件
+    .pipe(gulp.dest(function(file) {
+      // 保持目录结构
+      return file.base.replace('_js/custom', 'assets/js/custom');
+    }))
+    .pipe(browserSync.reload({ stream: true }))
+    .pipe(gulp.dest(function(file) {
+      // 保持目录结构
+      return file.base.replace('_js/custom', '_site/assets/js/custom');
+    }));
+}
+
+/**
  * Compile and minify js
  */
 function scripts() {
@@ -116,6 +133,7 @@ function watchMarkup() {
 
 function watchScripts() {
   gulp.watch([ '_js/*.js' ], scripts);
+  gulp.watch([ '_js/custom/**/*.js' ], scriptsCustom);
 }
 
 function watchStyles() {
@@ -126,7 +144,7 @@ function watch() {
   gulp.parallel(watchData, watchMarkup, watchScripts, watchStyles);
 }
 
-var compile = gulp.parallel(styles, stylesVendors, scripts, scriptsVendors);
+var compile = gulp.parallel(styles, stylesVendors, scripts, scriptsVendors, scriptsCustom);
 var serve = gulp.series(compile, jekyll, browserSyncServe);
 var watch = gulp.parallel(watchData, watchMarkup, watchScripts, watchStyles);
 

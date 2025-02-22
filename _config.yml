@@ -19,14 +19,14 @@ username: Lemoon Can
 # > set this to your job title, e.g. Fullstack Developer
 typing_text: Welcome
 # email: Your E-Mail address for the email button.
-email: email@example.com
+email: lemoon.can@gmail.com
 # For every social button you want to display, set your username or userid
 # If you do not use one of the following websites, then leave it empty
 # > twitter_username:
 github_username: LemoonCan
 bilibili_username: exampleUser
 douban_username: LemoonCan
-zhihu_username: lemon-candy-86-83-35
+infoq_username: lemoon-can
 microcosm_username: exampleUser
 
 # GOOGLE-ANALYTICS

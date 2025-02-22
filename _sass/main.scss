@@ -241,13 +241,13 @@ a {
     }
   }
 
-  .zhihu:hover {
+  .infoq:hover {
     .circle {
       animation: outWaveIn 1s cubic-bezier(0.42, 0, 0.58, 1) forwards,
-        colorZhihu 1s linear forwards;
+        colorInfoQ 1s linear forwards;
     }
     .social-svg {
-      fill: #007bb6;
+      fill: #34b762;
     }
   }
 
@@ -313,9 +313,9 @@ a {
     }
   }
 
-  @keyframes colorZhihu {
+  @keyframes colorInfoQ {
     to {
-      stroke: #007bb6;
+      stroke: #34b762;
     }
   }
 
@@ -354,4 +354,22 @@ a {
   to {
       transform: translateY(100vh);
   }
+}
+
+.social-link.email {
+  position: relative;
+}
+
+.email-address {
+  position: absolute;
+  top: -35px;
+  left: 50%;
+  transform: translateX(-50%);
+  color: #fff;
+  font-size: 15px;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease, visibility 0.3s ease;
+  cursor: text;
+  white-space: nowrap;
 }

@@ -19,6 +19,11 @@
 
   <script src="{{ "/assets/js/vendors.min.js" | prepend: site.baseurl }}"></script>
   <script src="{{ "/assets/js/app.min.js" | prepend: site.baseurl }}"></script>
+  {% for file in site.static_files %}
+  {% if file.path contains '/assets/js/custom/' and file.extname == '.js' %}
+    <script src="{{ file.path | prepend: site.baseurl }}"></script>
+  {% endif %}
+  {% endfor %}
 </head>
 
 <body>
