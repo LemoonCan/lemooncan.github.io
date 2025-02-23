@@ -14,10 +14,22 @@ document.addEventListener('DOMContentLoaded', function() {
       // 清除选中状态
       window.getSelection().removeAllRanges();
     });
-    
-    // 点击时不自动选中
-    emailAddress.addEventListener('mousedown', function(e) {
-      e.preventDefault();
+
+    emailAddress.addEventListener('click', function() {
+      const email = this.textContent;
+      navigator.clipboard.writeText(email).then(() => {
+          // 添加copied类显示提示
+          this.classList.add('copied');
+          
+          // 2秒后移除提示
+          setTimeout(() => {
+              this.classList.remove('copied');
+          }, 2000);
+      }).catch(err => {
+          console.error('复制失败:', err);
+      });
     });
   }
 }); 
+
+

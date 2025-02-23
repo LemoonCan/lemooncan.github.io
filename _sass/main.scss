@@ -8,8 +8,8 @@
 $small-screen: 48em !default;
 $medium-screen: 62em !default;
 $large-screen: 75em !default;
-$font-family: "Comic Sans MS", cursive, sans-serif;
-$font-family-numbers: "Comic Sans MS", cursive, sans-serif;
+$font-family: -apple-system, "Comic Sans MS", cursive, sans-serif;
+$font-family-numbers: -apple-system, "Comic Sans MS", cursive, sans-serif;
 $font-size-base: 1rem !default;
 $font-size-h1: 2rem !default;
 $font-weight-strong: 600;
@@ -362,7 +362,7 @@ a {
 
 .email-address {
   position: absolute;
-  top: -35px;
+  top: -22px;
   left: 50%;
   transform: translateX(-50%);
   color: #fff;
@@ -370,6 +370,33 @@ a {
   opacity: 0;
   visibility: hidden;
   transition: opacity 0.3s ease, visibility 0.3s ease;
-  cursor: text;
+  cursor: pointer;
   white-space: nowrap;
+  line-height: 1.5;
+  border-radius: 4px;
+
+  // 添加提示框样式
+  &::before {
+    content: "已复制！";
+    position: absolute;
+    bottom: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    color: #ffffff;
+    border-radius: 4px;
+    font-size: 15px;
+    margin-bottom: 2px;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease;
+  }
+  
+  // 复制成功时的状态
+  &.copied::before {
+    opacity: 1;
+    visibility: visible;
+  }
+}
+.email-address:hover {
+  background-color: rgba(255, 255, 255, 0.5);
 }
