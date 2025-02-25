@@ -37,34 +37,18 @@
       {% endif %}
 
       {% if site.bilibili_username != null %}
-      <a class="social-link bilibili" aria-label="My Bilibili" target="_blank" rel="noreferrer"
-        href="https://www.bilibili.com/">
+      <a class="social-link bilibili" aria-label="My Blog" target="_blank" rel="noreferrer"
+        href="{{ '/posts' | prepend: site.baseurl }}">
         <svg viewBox="0 0 200 200" class="circle">
           <circle cx="100" cy="100" r="80" />
         </svg>
         <div class="social">
           <svg class="social-svg" viewBox="0 0 48 48">
             <use x="12" y="12" width="24" height="24" viewBox="0 0 48 48" xlink:href="{{ "
-              /assets/img/brands.svg#bilibili" | prepend: site.baseurl }}"></use>
+              /assets/img/solid.svg#blog" | prepend: site.baseurl }}"></use>
           </svg>
         </div>
-        <span class="label">Bilibili</span>
-      </a>
-      {% endif %}
-
-      {% if site.douban_username != null %}
-      <a class="social-link douban" aria-label="My Douban" target="_blank" rel="noreferrer"
-        href="https://www.douban.com/people/{{site.douban_username}}/?_i=4361601TdD8ekt">
-        <svg viewBox="0 0 200 200" class="circle">
-          <circle cx="100" cy="100" r="80" />
-        </svg>
-        <div class="social">
-          <svg class="social-svg" viewBox="0 0 48 48">
-            <use x="12" y="12" width="24" height="24" viewBox="0 0 48 48" xlink:href="{{ "
-              /assets/img/brands.svg#douban" | prepend: site.baseurl }}"></use>
-          </svg>
-        </div>
-        <span class="label">豆瓣</span>
+        <span class="label">Blog</span>
       </a>
       {% endif %}
 
@@ -81,6 +65,22 @@
           </svg>
         </div>
         <span class="label">InfoQ</span>
+      </a>
+      {% endif %}
+
+      {% if site.douban_username != null %}
+      <a class="social-link douban" aria-label="My Douban" target="_blank" rel="noreferrer"
+        href="https://www.douban.com/people/{{site.douban_username}}/?_i=4361601TdD8ekt">
+        <svg viewBox="0 0 200 200" class="circle">
+          <circle cx="100" cy="100" r="80" />
+        </svg>
+        <div class="social">
+          <svg class="social-svg" viewBox="0 0 48 48">
+            <use x="12" y="12" width="24" height="24" viewBox="0 0 48 48" xlink:href="{{ "
+              /assets/img/brands.svg#douban" | prepend: site.baseurl }}"></use>
+          </svg>
+        </div>
+        <span class="label">豆瓣</span>
       </a>
       {% endif %}
 

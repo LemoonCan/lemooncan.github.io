@@ -224,9 +224,10 @@ a {
       }
 
       .label {
-        display: unset !important;
+        display: block;
         position: relative;
         top: -2rem;
+        text-align: center;
       }
     }
   }
@@ -267,7 +268,7 @@ a {
         colorBilibili 1s linear forwards;
     }
     .social-svg {
-      fill: #fa729a;
+      fill: #f9515d;
     }
   }
 
@@ -327,7 +328,7 @@ a {
 
   @keyframes colorBilibili {
     to {
-      stroke: #fa729a;
+      stroke: #f9515d;
     }
   }
 
