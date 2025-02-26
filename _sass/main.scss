@@ -262,10 +262,10 @@ a {
     }
   }
 
-  .bilibili:hover {
+  .myblog:hover {
     .circle {
       animation: outWaveIn 1s cubic-bezier(0.42, 0, 0.58, 1) forwards,
-        colorBilibili 1s linear forwards;
+        colorMyblog 1s linear forwards;
     }
     .social-svg {
       fill: #f9515d;
@@ -326,7 +326,7 @@ a {
     }
   }
 
-  @keyframes colorBilibili {
+  @keyframes colorMyblog {
     to {
       stroke: #f9515d;
     }
